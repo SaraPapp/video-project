@@ -1,0 +1,74 @@
+@import '../external/modal-video-master/scss/modal-video';
+
+* {
+  box-sizing: border-box;
+}
+
+.video-container {
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg');
+
+  .content {
+    z-index: 6;
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    left: calc(50% - 250px);
+    top: 40%;
+    .text {
+      font-size: 2em;
+      color: #ffa500;
+      text-align: center;
+      width: 100%;
+    }
+    button {
+      margin: 20px auto;
+      background-color: #847979;
+      box-sizing: border-box;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: #d61b1b;
+      text-align: center;
+      padding-left: 15px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      outline: none;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+    .btnmodal:hover {
+      background-color: #c2bebe;
+      box-shadow: 0px 0px 10px rgba(245,245,245,5);
+    }
+  }
+  .video {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    .hover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 5;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+//Modal
+.modal-video {
+  background-color: rgba(0,0,0,.95);
+}
