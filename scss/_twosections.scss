@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: 450px;
+  height: 700px;
   margin-bottom: 170px;
   background-color: white;
   position: relative;
@@ -14,6 +14,9 @@
   .section-image {
     max-width: 350px;
     max-height: 450px;
+    img {
+      width: 100%;
+    }
   }
   .section-text {
     position: absolute;
@@ -33,10 +36,11 @@
   .text-left {
     text-align: left;
     left: 10%;
+    top: 40%;
   }
   .bottom-section {
     display: block;
-    margin: auto;
-    padding: 0;
+    margin: 0;
+    padding-top: 100px;
   }
 }

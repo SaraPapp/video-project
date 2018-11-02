@@ -102,9 +102,84 @@
     border-radius: 5px;
     margin-top: -6px; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 .container {
   width: 100vw;
-  height: 450px;
+  height: 700px;
   margin-bottom: 170px;
   background-color: white;
   position: relative; }
@@ -117,6 +192,8 @@
   .container .section-image {
     max-width: 350px;
     max-height: 450px; }
+    .container .section-image img {
+      width: 100%; }
   .container .section-text {
     position: absolute;
     height: 300px;
@@ -131,11 +208,12 @@
     right: 10%; }
   .container .text-left {
     text-align: left;
-    left: 10%; }
+    left: 10%;
+    top: 40%; }
   .container .bottom-section {
     display: block;
-    margin: auto;
-    padding: 0; }
+    margin: 0;
+    padding-top: 100px; }
 
 .text-content {
   border-bottom: 2px solid blue; }
@@ -213,7 +291,8 @@
 .sub-sub-content {
   position: relative;
   background-color: white;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  margin-bottom: 150px; }
 
 .footer {
   width: 100%;
@@ -233,7 +312,79 @@
     .footer .logo img {
       width: 100%; }
   .footer .text {
-    width: calc( calc(100% - 100px) / 2 ); }
+    width: calc(calc(100% - 100px) / 2); }
+
+body {
+  margin: 0; }
+
+.videotext-container {
+  height: 60vh;
+  padding: 10vh 0; }
+  .videotext-container .videotext {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 188px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .videotext-container .videotext svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2; }
+    .videotext-container .videotext .videotext-container {
+      margin: 0 auto; }
+      .videotext-container .videotext .videotext-container video {
+        width: 100%;
+        display: block;
+        clip-path: url(#clip-00); }
+  .videotext-container .donkey-text {
+    text-align: center;
+    margin: 20px; }
+
+.carousel-container {
+  margin: 20px 0;
+  width: 100vw;
+  height: 100vh; }
+  .carousel-container .tab {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center; }
+    .carousel-container .tab .shadow {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .carousel-container .tab .text-container {
+      max-width: 300px;
+      position: absolute;
+      bottom: 10%;
+      left: 15%; }
+      .carousel-container .tab .text-container .tab-title {
+        margin-bottom: 30px;
+        font-size: 1.8em; }
+      .carousel-container .tab .text-container .tab-text,
+      .carousel-container .tab .text-container .tab-title {
+        color: white; }
+    .carousel-container .tab .line {
+      margin: 20px 0;
+      width: 60%;
+      border-bottom: 1px solid white; }
+
+.slick-dots {
+  bottom: -10px; }
+  .slick-dots li button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px; }
+    .slick-dots li button::before {
+      display: none; }
+  .slick-dots .slick-active button {
+    background-color: white; }
 
 * {
   box-sizing: border-box; }
